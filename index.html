@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="FruitsAndVeggies">
     <head>
         <title>Fruit and Veggies</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -10,17 +10,25 @@
         <script src="js/app.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="container" ng-controller="ListCtrl">
             <h1>Fruit and Veggies</h1>
             <div class="row">
                 <div class="col-sm-4">
-                    col 1
+                    <h1 class="text-warning text-center">Fruits</h1>
+                    <div class="well" ng-repeat="item in newFruits track by $index">
+                      <p class="text-center">{{ item }}<button style="margin-left: 10px;" class="btn btn-primary" ng-click="combineRight()">&rarr;</button>
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    col 2
+                    <h1 class="text-info text-center">Fruits & Veggies</h1>
+                      <div class="well" ng-repeat="item in fullList track by $index">
+                        <p class="text-center"><button class="btn btn-primary" ng-click="moveLeft()">&larr;</button> {{ item }} <button class="btn btn-primary" ng-click="moveRight()">&rarr;</button></p>
+                      </div>
                 </div>
                 <div class="col-sm-4">
-                    col 3
+                    <h1 class="text-success text-center">Veggies</h1>
+                    <div class="well" ng-repeat="item in newVeggies track by $index">
+                      <p class="text-center" ng-class=""><button style="margin-right: 10px;" class="btn btn-primary" ng-click="combineLeft()">&larr;</button>{{ item }}</p>
                 </div>
             </div>
         </div>
