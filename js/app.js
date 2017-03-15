@@ -12,10 +12,10 @@ app.controller("ListCtrl", ["$scope", function($scope){
 
     if(fruits.includes(this.item)){
       console.log(this.item, "is a fruit")
-      $scope.class = "correct";
-    } else {
+    }else {
       console.log(this.item, "is not a fruit")
     }
+
   }
 
   $scope.moveRight = function(){
@@ -38,5 +38,6 @@ app.controller("ListCtrl", ["$scope", function($scope){
     $scope.newVeggies.splice(this.$index, 1);
     $scope.fullList.push(this.item);
   }
+
 
 }]);

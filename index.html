@@ -16,7 +16,7 @@
                 <div class="col-sm-4">
                     <h1 class="text-warning text-center">Fruits</h1>
                     <div class="well" ng-repeat="item in newFruits track by $index">
-                      <p class="text-center">{{ item }}<button style="margin-left: 10px;" class="btn btn-primary" ng-click="combineRight()">&rarr;</button>
+                      <p class="text-center">{{ item }}<button style="margin-left: 10px;" class="btn btn-default" ng-click="combineRight()">&rarr;</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -28,7 +28,7 @@
                 <div class="col-sm-4">
                     <h1 class="text-success text-center">Veggies</h1>
                     <div class="well" ng-repeat="item in newVeggies track by $index">
-                      <p class="text-center" ng-class=""><button style="margin-right: 10px;" class="btn btn-primary" ng-click="combineLeft()">&larr;</button>{{ item }}</p>
+                      <p class="text-center"><button style="margin-right: 10px;" class="btn btn-default" ng-click="combineLeft()">&larr;</button>{{ item }}</p>
                 </div>
             </div>
         </div>
